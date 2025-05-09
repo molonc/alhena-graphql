@@ -39,22 +39,22 @@ export const configConsts = [
 		class: "numerical"
 	},
   {
-    label: "Fastqscreen Human",
+    label: "FastQ Screen Human",
     type: "fastqscreen_grch37",
     class: "numerical"
   },
   {
-    label: "Fastqscreen Human Multihit",
+    label: "FastQ Screen Human Multihit",
     type: "fastqscreen_grch37_multihit",
     class: "numerical"
   },
   { 
-		label: "Fastqscreen Mouse",
+		label: "FastQ Screen Mouse",
 		type: "fastqscreen_mm10",
 		class: "numerical"
 	},
   {
-    label: "Fastqscreen Mouse Multihit",
+    label: "FastQ Screen Mouse Multihit",
     type: "fastqscreen_mm10_multihit",
     class: "numerical"
   },
@@ -74,7 +74,7 @@ export const configConsts = [
 		class: "numerical"
 	},
   {
-    label: "FastqQ Screen Salmon",
+    label: "FastQ Screen Salmon",
     type: "fastqscreen_salmon",
     class: "numerical"
   },
@@ -261,6 +261,7 @@ export const configConsts = [
     class: "boolean"
   }
 ];
+
 //  { type: "project", label: "Project" },
 export const defaultDashboardColumns = [
   { type: "sample_id", label: "Sample ID" },
