@@ -1,50 +1,38 @@
-# GraphQL Boilerplate
-
-This project acts a boilerplate for the GraphQL layer of visualizations.
-
-[React layer](https://github.com/shahcompbio/viz-react-boilerplate)
-[GraphQL layer](https://github.com/shahcompbio/viz-graphql-boilerplate)
+# Alhena GraphQL
+GraphQL layer for Aparicio Lab's instance of Alhena.
 
 ## Features
 
 - Powered by [Apollo](https://www.apollographql.com/)
 - Production build in [Docker](https://www.docker.com/)
-- Snapshot testing with [Jest](https://jestjs.io/)
 
-## How to use
-
-To use the boilerplate:
-
+## Install Dependencies
+Note: use `node v12`
 ```
-git clone --depth=1 https://github.com/shahcompbio/viz-graphql-boilerplate.git <your project name>
-rm -r <your project name>/.git
+yarn install
 ```
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br>
+## Start Development Server
+```
+yarn start
+```
 Open [http://localhost:4000/graphql](http://localhost:4000/graphql) to view the playground in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Transpiles the app for production to the `lib` folder.
-
-### `yarn test`
-
-Runs all tests.
-
-## Docker build
-
-This project can be built for production and packaged with Docker. To do this:
+## Docker build and Dockerhub
+This project can be built for production and packaged with Docker. Replace the version number with the version of the application being built.
 
 ```
-docker build . -t graphql-boilerplate
-docker run -d -p 4000:4000 --name graphql graphql-boilerplate
+docker build . -t alhena-graphql:v1.0.6
+
+# (Optional) for testing
+docker run -d -p 4000:4000 --name graphql alhena-graphql:v1.0.6
+
+# Push to Dockerhub
+
+# Log in, if needed
+docker login -u molonc 
+
+docker tag alhena-graphql:v1.0.6 molonc/alhena-graphql:v1.0.6
+docker push molonc/alhena-graphql:v1.0.6
 ```
+
